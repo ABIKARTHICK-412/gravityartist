@@ -1,10 +1,5 @@
-import { createRoot } from 'react-dom/client';
-import { HashRouter as Router } from 'react-router-dom'; // ✅ Use HashRouter
-import App from './App.tsx';
-import './index.css';
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
 
-createRoot(document.getElementById('root')!).render(
-  <Router>  {/* Wrap your App with HashRouter */}
-    <App />
-  </Router>
-);
+createRoot(document.getElementById("root")!).render(<App />);
