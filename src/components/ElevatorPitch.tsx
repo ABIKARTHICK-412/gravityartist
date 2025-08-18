@@ -266,8 +266,7 @@ const slides = [
           <Card className="p-8 bg-gradient-card border-0 shadow-card-custom">
             <div className="text-center space-y-4">
               <Smartphone className="w-16 h-16 mx-auto text-accent" />
-              <h3 className="text-2xl font-semibold">Mobile Expansion <span className="font-normal">(future releases)</span></h3>
-
+              <h3 className="text-2xl font-semibold">Mobile Expansion <span className="text-gray-500 text-lg">Future Releases</span></h3>
               <p className="text-xl font-bold text-accent">Ad-Supported</p>
               <p className="text-muted-foreground">Interstitial and banner ads with optional cosmetic purchases</p>
               <div className="pt-4 space-y-2">
