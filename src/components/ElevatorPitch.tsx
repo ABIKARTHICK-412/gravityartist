@@ -408,7 +408,7 @@ export default function ElevatorPitch() {
       <footer className="border-t bg-muted/30 py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            Gravity Artist - Puzzle-Platformer Game Concept | Unity 2022 LTS | Target Release: 2025
+            Gravity Artist - Puzzle-Platformer Game Concept | Unity 2022.2 LTS | Target Release: 2025
           </p>
         </div>
       </footer>
