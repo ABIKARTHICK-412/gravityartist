@@ -9,6 +9,8 @@ import mechanicsDemo from "@/assets/mechanics-2d-demo.png";
 import levelDesign from "@/assets/level-design-2d.png";
 import uspIllustration from "@/assets/usp-illustration.png";
 import targetAudience from "@/assets/target-audience.png";
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const slides = [
   {
@@ -242,6 +244,84 @@ const slides = [
     )
   },
   {
+  title: "Taxonomy – Player Types",
+  content: (
+    <div className="space-y-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-6">Player Taxonomy</h2>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Gravity Artist appeals to different types of players. Here’s how each Bartle player type engages with our game.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Card className="p-6 text-center bg-gradient-card shadow-card-custom">
+          <Users className="w-12 h-12 mx-auto text-primary mb-3" />
+          <h3 className="text-xl font-semibold">Achievers</h3>
+          <p className="text-muted-foreground text-sm">
+            Enjoy completing levels, collecting rewards, and mastering paint mechanics.
+          </p>
+        </Card>
+
+        <Card className="p-6 text-center bg-gradient-card shadow-card-custom">
+          <Target className="w-12 h-12 mx-auto text-accent mb-3" />
+          <h3 className="text-xl font-semibold">Explorers</h3>
+          <p className="text-muted-foreground text-sm">
+            Love experimenting with physics, discovering hidden canvas zones, and testing creative solutions.
+          </p>
+        </Card>
+
+        <Card className="p-6 text-center bg-gradient-card shadow-card-custom">
+          <Gamepad2 className="w-12 h-12 mx-auto text-paint-blue mb-3" />
+          <h3 className="text-xl font-semibold">Socializers</h3>
+          <p className="text-muted-foreground text-sm">
+            Engage by sharing painted creations and competing in light-hearted challenges.
+          </p>
+        </Card>
+
+        <Card className="p-6 text-center bg-gradient-card shadow-card-custom">
+          <Zap className="w-12 h-12 mx-auto text-destructive mb-3" />
+          <h3 className="text-xl font-semibold">Killers</h3>
+          <p className="text-muted-foreground text-sm">
+            Enjoy the chaotic ragdoll physics and competing for high scores or fastest runs.
+          </p>
+        </Card>
+      </div>
+      {/* Pie Chart Section */}
+<div className="mt-12">
+  <h3 className="text-2xl font-semibold text-center mb-6">Player Type Distribution</h3>
+  <ResponsiveContainer width="100%" height={350}>
+    <PieChart>
+      <Pie
+        data={[
+          { name: "Achievers", value: 35 },
+          { name: "Explorers", value: 25 },
+          { name: "Socializers", value: 20 },
+          { name: "Killers", value: 20 },
+        ]}
+        cx="50%"
+        cy="50%"
+        outerRadius={120}
+        fill="#8884d8"
+        dataKey="value"
+        label
+      >
+        <Cell fill="#3b82f6" />
+        <Cell fill="#22c55e" />
+        <Cell fill="#eab308" />
+        <Cell fill="#ef4444" />
+      </Pie>
+      <Tooltip />
+      <Legend />
+    </PieChart>
+  </ResponsiveContainer>
+</div>
+
+    </div>
+  )
+},
+
+  {
     title: "Monetization & Platform",
     content: (
       <div className="space-y-8">
@@ -347,6 +427,9 @@ export default function ElevatorPitch() {
             </div>
           </div>
         </div>
+        <div className="flex items-center gap-4">
+  <ThemeToggle />
+</div>
       </header>
 
       {/* Main Content */}
